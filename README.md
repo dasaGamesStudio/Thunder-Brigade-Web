@@ -1,26 +1,45 @@
-# Thunder-Brigade-Web
-Official website for team Thunder Brigade
+# Thunder Brigade Website
 
-## Guideline for our teammates 
+Welcome to the Thunder Brigade Website, a project created by our team to gain experience and knowledge in website development.
 
-### Communicate: 
-  Good communication is key to working effectively with others on a project. Make sure you establish clear communication channels with your friends, such as using chat apps or video conferencing tools. Discuss the project goals, timelines, and responsibilities with your friends to ensure everyone is on the same page. 
+## Overview
 
-### Follow a workflow: 
-  It is important to establish a clear workflow for your project. You can use a popular workflow such as Gitflow, or create your own. The workflow should include guidelines for branching, committing, and merging code changes. It's important to make sure everyone on the team follows the workflow to avoid confusion and conflicts. 
+Our website serves as an online presence for Thunder Brigade, showcasing our team's goals, achievements, and members. It includes information about our past and current projects, as well as our contact information and social media links.
 
-### Use meaningful commit messages: 
-  When committing changes to the repository, it's important to use clear and descriptive commit messages that explain the changes being made. This makes it easier for others to understand the code changes and helps to maintain a clean commit history. 
+## Features
 
-### Review each other's code: 
-  Code review is an important part of the development process. Encourage your friends to review each other's code and provide constructive feedback. This can help to catch bugs and improve the overall quality of the code. 
+Home page with a brief introduction to Thunder Brigade and links to our social media accounts
+About Us page with more detailed information about our team's history, goals, and members
+Projects page with descriptions and links to our past and current projects
+Contact Us page with a contact form and our email address for inquiries
+Responsive design for optimal viewing on all devices
+Technologies Used
 
-### Test your code: 
-  It's important to test your code thoroughly to ensure it works as expected. You can use automated tests or manual testing to validate your code. Encourage your friends to test their code as well to catch any bugs or issues. 
+- HTML5 for markup
+- CSS3 for styling
+- JavaScript for interactivity
+- GitHub for version control and collaboration
 
-### Respect each other's contributions: 
-  Everyone on the team should respect each other's contributions to the project. Avoid making changes without discussing them with your friends first. If you have a disagreement about a code change, try to resolve it through respectful discussion.
+## How to Use
 
-### Conclusion
+To view our website, simply visit [no url]. The website is optimized for all modern web browsers and devices, so feel free to explore it on your desktop, laptop, tablet, or smartphone.
 
-  By following these basic guidelines, we can work effectively with each other on this project. Let's collaborate and build something great!
+To contribute to the website, please fork our GitHub repository and submit pull requests with your changes. We welcome any suggestions or feedback you may have!
+
+## Credits
+
+Our team members who contributed to this project include:
+
+- Bhanuka Dassanayake
+- Atheek Naheem
+- Afeef Razick
+- Oshada Perera
+- Nanthushan something...
+
+We also used various online resources and tutorials to learn about web development and design. Special thanks to the following:
+
+resources....
+
+## License
+
+This project is licensed under the MIT License license. See the MIT-LICENSE file for details.
