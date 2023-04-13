@@ -34,7 +34,7 @@ Our team members who contributed to this project include:
 - Atheek Naheem
 - Afeef Razick
 - Oshada Perera
-- Nanthushan something...
+- Nanthushan Yoogeswaran
 
 We also used various online resources and tutorials to learn about web development and design. Special thanks to the following:
 
