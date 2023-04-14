@@ -2,6 +2,7 @@ body {
   background-color: rgb(10, 1, 27);
   height: 100vh;
   margin: 0px;
+  overflow: hidden;
 }
 
 .trailer {
