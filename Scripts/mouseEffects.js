@@ -16,7 +16,7 @@ const colors = [
 trailers.forEach(function (trailer, index) {
   trailer.x = 0;
   trailer.y = 0;
-  trailer.style.backgroundColor = colors[index % colors.length];
+  //trailer.style.backgroundColor = colors[index % colors.length];
 });
 
 window.addEventListener("mousemove", function (e) {
