@@ -28,6 +28,18 @@ It's important to test your code thoroughly to ensure it works as expected. You 
 
 Everyone on the team should respect each other's contributions to the project. Avoid making changes without discussing them with your friends first. If you have a disagreement about a code change, try to resolve it through respectful discussion.
 
-### Conclusion
+## Collaboration Guidelines for Project Members: Using Semantic Versioning and Member Codes
 
-By following these basic guidelines, we can work effectively with each other on this project. Let's collaborate and build something great!
+### Use a member code when you commit something:
+
+Each member should have a unique two-letter code that they can use when committing their changes to the project. The #### codes are as follows:
+
+- Bhanuka: bh
+- Atheek: an
+- Afeef: af
+- Oshada: op
+- Nanthu: ny
+- Savi: ss
+  When making a commit, start your commit message with your member code followed by a brief description of the changes you made.
+  For example, if Bhanuka made a minor update to the Mouse Effect, his commit message could be:
+  mouse effect bh 0.2.1

@@ -30,12 +30,12 @@ To contribute to the website, please fork our GitHub repository and submit pull 
 
 Our team members who contributed to this project include:
 
-- Bhanuka Dassanayake
-- Atheek Naheem
-- Afeef Razick
-- Oshada Perera ?
-- Nanthushan Yoogeswaran ?
-- Savi Saluwadana ?
+- Bhanuka Dassanayake : bh
+- Atheek Naheem : an
+- Afeef Razick : af
+- Oshada Perera : op
+- Nanthushan Yoogeswaran : ny
+- Savi Saluwadana : ss
 
 We also used various online resources and tutorials to learn about web development and design. Special thanks to the following:
 
