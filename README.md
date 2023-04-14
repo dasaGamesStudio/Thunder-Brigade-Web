@@ -38,7 +38,7 @@ Our team members who contributed to this project include:
 
 We also used various online resources and tutorials to learn about web development and design. Special thanks to the following:
 
-resources....
+linkedin learning javascript essential training
 
 ## License
 
