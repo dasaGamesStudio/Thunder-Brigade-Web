@@ -33,12 +33,13 @@ Our team members who contributed to this project include:
 - Bhanuka Dassanayake
 - Atheek Naheem
 - Afeef Razick
-- Oshada Perera
-- Nanthushan Yoogeswaran
+- Oshada Perera ?
+- Nanthushan Yoogeswaran ?
+- Savi Saluwadana ?
 
 We also used various online resources and tutorials to learn about web development and design. Special thanks to the following:
 
-linkedin learning javascript essential training
+- linkedin learning javascript essential training
 
 ## License
 
