@@ -1,8 +1,8 @@
 body {
-  background-color: rgb(10, 1, 27);
   height: 100vh;
   margin: 0px;
   overflow: hidden;
+  background: radial-gradient(circle, rgb(8, 1, 29), rgb(0, 0, 0));
 }
 
 .trailer {
@@ -16,8 +16,10 @@ body {
   z-index: 10000;
   pointer-events: none;
 
-  filter: blur(0px);
   animation: glow 1s ease-in-out infinite alternate;
+
+  opacity: 0;
+  transition: opacity 500ms ease-in;
 }
 
 @keyframes glow {
@@ -29,4 +31,8 @@ body {
     box-shadow: 0 0 15px #fff, 0 0 25px #fff, 0 0 35px #fff, 0 0 50px #ff00ff,
       0 0 90px #ff00ff, 0 0 100px #ff00ff, 0 0 120px #ff00ff, 0 0 170px #ff00ff;
   }
+}
+
+body:hover > .trailer {
+  opacity: 1;
 }

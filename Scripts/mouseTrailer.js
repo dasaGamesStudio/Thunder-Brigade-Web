@@ -1,16 +1,22 @@
-const coords = { x: 0, y: 0 };
+const coords = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
 
-const trailers = document.querySelectorAll(".trailer");
+const particleCount = 15;
+
+const trailers = [];
+
+for (let i = 0; i < particleCount; i++) {
+  const particle = document.createElement("div");
+  particle.classList.add("trailer");
+  document.body.appendChild(particle);
+  trailers[i] = particle;
+}
 
 trailers.forEach(function (trailer, index) {
   trailer.x = 0;
   trailer.y = 0;
-  //trailer.style.backgroundColor = colors[index % colors.length];
 });
 
 window.addEventListener("mousemove", function (e) {
-  console.log(e.clientX, e.clientY);
-
   coords.x = e.clientX;
   coords.y = e.clientY;
 });
@@ -20,7 +26,6 @@ function animateTrails() {
   let y = coords.y;
 
   trailers.forEach(function (trailer, index) {
-    //trailer.style.transform = `translate(${x - 12}px, ${y - 12}px)`;
     trailer.style.left = x + "px";
     trailer.style.top = y + "px";
 
