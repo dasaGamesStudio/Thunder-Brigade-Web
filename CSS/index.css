@@ -71,9 +71,10 @@ nav ul li a:hover {
   animation: background-pan 15s linear infinite;
   background: linear-gradient(
     to right,
-    rgb(255, 255, 255),
-    rgb(1, 10, 22),
-    rgb(255, 255, 255)
+    rgb(237, 91, 250),
+    rgb(154, 81, 250),
+    rgb(237, 252, 100),
+    rgb(237, 91, 250)
   );
 
   background-size: 200%;
