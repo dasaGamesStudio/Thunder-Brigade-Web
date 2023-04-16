@@ -14,7 +14,7 @@ allelementsarray.forEach((element) => {
 const html = `
 <!-- input tag -->
 <input class="searchbar" type="text"
-    name="search" placeholder="Search..">
+    name="search" placeholder="Search">
 
 `
 const form = document.createElement('form')

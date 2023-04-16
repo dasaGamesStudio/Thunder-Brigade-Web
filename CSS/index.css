@@ -103,6 +103,11 @@ canvas {
   filter: blur(3px);
 }
 ::placeholder {
-  color: purple;
+  color: white;
   opacity: 1;
+}
+
+.searchbar {
+  color: white;
+  background-color: rgb(2, 2, 15);
 }
