@@ -14,13 +14,15 @@
   box-sizing: border-box;
   font-family: "Orbitron", sans-serif;
   color: rgb(218, 230, 242);
+  /* user-select: none;
+  -webkit-user-select: none; */
 }
 
 body {
   margin: 0px;
   place-items: center;
   overflow: hidden;
-  background: radial-gradient(circle, rgb(5, 0, 18), rgb(0, 0, 0));
+  background: radial-gradient(circle, rgb(1, 27, 41), rgb(2, 2, 15));
 }
 
 .hero {
@@ -46,6 +48,10 @@ nav ul li a {
   font-size: var(--fs7);
 }
 
+nav ul li a:hover {
+  color: red;
+}
+
 .header-text {
   position: absolute;
   top: 35%;
@@ -62,14 +68,11 @@ nav ul li a {
 }
 
 .header-text h1 {
-  animation: background-pan 5s linear infinite;
+  animation: background-pan 15s linear infinite;
   background: linear-gradient(
     to right,
     rgb(255, 255, 255),
-    rgb(249, 154, 235),
-    rgb(174, 154, 249),
-    rgb(249, 247, 154),
-    rgb(249, 212, 154),
+    rgb(1, 10, 22),
     rgb(255, 255, 255)
   );
 
@@ -91,4 +94,11 @@ nav ul li a {
 .header-text h2 {
   margin: 30px 4px;
   font-size: var(--fs5);
+}
+
+canvas {
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  filter: blur(3px);
 }

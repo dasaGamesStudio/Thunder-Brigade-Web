@@ -11,7 +11,6 @@ function updateFontSizes() {
       id,
       fontSizes[i] * refLength + "px"
     );
-    console.log(fontSizes[i]);
   }
 }
 updateFontSizes();
