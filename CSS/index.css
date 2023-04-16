@@ -92,3 +92,8 @@ nav ul li a {
   margin: 30px 4px;
   font-size: var(--fs5);
 }
+
+::placeholder {
+  color: purple;
+  opacity: 1;
+}
