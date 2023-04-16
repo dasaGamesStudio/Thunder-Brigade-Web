@@ -96,16 +96,13 @@ nav ul li a:hover {
   font-size: var(--fs5);
 }
 
-<<<<<<< HEAD
 canvas {
   position: fixed;
   margin: 0;
   padding: 0;
   filter: blur(3px);
 }
-=======
 ::placeholder {
   color: purple;
   opacity: 1;
 }
->>>>>>> e03bf0c1e682cf53b4347a2c8a660037380c62f3
