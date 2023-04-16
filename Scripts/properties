@@ -1,0 +1,20 @@
+function updateFontSizes() {
+  const refLength =
+    window.innerHeight > window.innerWidth
+      ? window.innerWidth
+      : window.innerHeight; // this is kinda weird, right? but this way the fonts will resize according to the screen size.
+
+  const fontSizes = [0.25, 0.2, 0.15, 0.1, 0.05, 0.03, 0.02];
+  for (let i = 0; i < fontSizes.length; i++) {
+    var id = "--fs" + (i + 1);
+    document.documentElement.style.setProperty(
+      id,
+      fontSizes[i] * refLength + "px"
+    );
+    console.log(fontSizes[i]);
+  }
+}
+updateFontSizes();
+window.addEventListener("resize", function () {
+  updateFontSizes();
+});
