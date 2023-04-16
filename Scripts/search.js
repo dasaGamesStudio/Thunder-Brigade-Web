@@ -1,3 +1,5 @@
+// possible improvement is to use html.innertext to find element instead of class name
+
 // gets all elements into an HTMLCollection
 const allelements = document.getElementsByTagName("*")
 for (var allelementsarray=[], i=allelements.length; i;) allelementsarray[--i] = allelements[i]
@@ -43,3 +45,21 @@ form.addEventListener("submit",(e)=>{
 const nav = document.querySelector('nav')
 form.innerHTML=html
 nav.append(form)
+
+// below is the dropdown for members
+
+const listofmembers = `
+<button class="dropbtn">Members
+  <i class="fa fa-caret-down"></i>
+</button>
+<div class="dropdown-content">
+  <a href="#">Afeef</a>
+  <a href="#">Atheek</a>
+  <a href="#">Bhanuka</a>
+  <a href="#">Nanthushan</a>
+  <a href="#">Oshada</a>
+  <a href="#">Savi</a>
+</div>
+`
+const members = document.querySelector('.dropdown')
+members.innerHTML = listofmembers
