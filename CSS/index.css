@@ -117,7 +117,9 @@ canvas {
   padding-top: 5px;
   padding-bottom: 5px;
 }
-/* dropdown members */
+
+/* dropdown */
+
 /* The dropdown container */
 .dropdown {
   float: left;
@@ -129,6 +131,7 @@ canvas {
   border: none;
   outline: none;
   padding: 14px 16px;
+  min-width: 98px;
   background-color: inherit;
   font-family: inherit; /* Important for vertical align on mobile phones */
   margin: 0; /* Important for vertical align on mobile phones */
@@ -144,7 +147,7 @@ canvas {
   display: none;
   position: absolute;
   background-color: inherit;
-  min-width: 100px;
+  min-width: 98px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
