@@ -57,6 +57,20 @@ nav ul li a:hover {
   position: absolute;
   top: 35%;
   left: 4%;
+
+  animation: floating 8s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0%,
+  100% {
+    transform: skewY(-0.2deg);
+    scale: 1.02;
+  }
+  50% {
+    transform: skewY(0.2deg);
+    scale: 1;
+  }
 }
 
 @keyframes background-pan {
@@ -85,7 +99,6 @@ nav ul li a:hover {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   white-space: nowrap;
-  text-shadow: 0px 0px 50px rgba(255, 255, 255, 0.325);
 }
 
 .header-text p {
@@ -99,10 +112,12 @@ nav ul li a:hover {
 }
 
 canvas {
-  position: fixed;
+  position: absolute;
+  top: 0%;
+  left: 0%;
   margin: 0;
   padding: 0;
-  filter: blur(3px);
+  filter: blur(2px);
 }
 ::placeholder {
   color: white;

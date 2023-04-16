@@ -8,14 +8,15 @@ var ctx = canvas.getContext("2d");
 
 const starCount = 120;
 const stars = [];
-const starColors = ["red", "white", "orange", "blue"];
+const starColors = ["red", "white", "orange", "blue", "white", "pink"];
 
 for (let i = 0; i < starCount; i++) {
   stars[i] = new AnimCircle(
     innerWidth * Math.random(),
     innerHeight * Math.random(),
     2 * Math.random(),
-    0.5,
+    0.5 * (Math.random() * 2 - 1),
+    0.5 * (Math.random() * 2 - 1),
     starColors[Math.round(Math.random() * starColors.length)],
     ctx
   );
@@ -30,16 +31,15 @@ function animate() {
 }
 animate();
 
-function AnimCircle(x, y, r, v, color, ctx) {
+function AnimCircle(x, y, r, vx, vy, color, ctx) {
   this.x = x;
   this.y = y;
   this.r = r;
-  this.v = v;
+  this.vx = vx;
   this.ctx = ctx;
 
-  this.dx = v * (Math.random() * 2 - 1);
-  this.dy = v * (Math.random() * 2 - 1);
-  this.ctx.fillStyle = color;
+  this.dx = vx;
+  this.dy = vy;
 
   this.draw = function () {
     this.ctx.beginPath();
@@ -47,6 +47,7 @@ function AnimCircle(x, y, r, v, color, ctx) {
     this.ctx.strokeStyle = "white";
     this.ctx.stroke();
     this.ctx.fill();
+    this.ctx.fillStyle = color;
   };
 
   this.update = function () {
