@@ -14,8 +14,8 @@
   box-sizing: border-box;
   font-family: "Orbitron", sans-serif;
   color: rgb(218, 230, 242);
-  /* user-select: none;
-  -webkit-user-select: none; */
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 body {
@@ -71,10 +71,10 @@ nav ul li a:hover {
   animation: background-pan 15s linear infinite;
   background: linear-gradient(
     to right,
-    rgb(237, 91, 250),
-    rgb(154, 81, 250),
-    rgb(237, 252, 100),
-    rgb(237, 91, 250)
+    rgb(197, 88, 207),
+    rgb(141, 88, 209),
+    rgb(222, 159, 82),
+    rgb(197, 88, 207)
   );
 
   background-size: 200%;
@@ -138,7 +138,8 @@ canvas {
 }
 
 /* Add a red background color to navbar links on hover */
-.navbar a:hover, .dropdown:hover .dropbtn {
+.navbar a:hover,
+.dropdown:hover .dropbtn {
   background-color: red;
 }
 
@@ -148,7 +149,7 @@ canvas {
   position: absolute;
   background-color: inherit;
   min-width: 98px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
