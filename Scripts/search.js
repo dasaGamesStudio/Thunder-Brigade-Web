@@ -42,5 +42,4 @@ form.addEventListener("submit",(e)=>{
 // appends to nav in html document
 const nav = document.querySelector('nav')
 form.innerHTML=html
-const ul = nav.querySelector('ul')
-nav.insertBefore(form,ul)
+nav.append(form)
