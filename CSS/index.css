@@ -166,7 +166,9 @@ canvas {
 
 /* Add a grey background color to dropdown links on hover */
 .dropdown-content a:hover {
+  text-decoration: none;
   background-color: #8b7b7b;
+  color: white;
 }
 
 /* Show the dropdown menu on hover */
