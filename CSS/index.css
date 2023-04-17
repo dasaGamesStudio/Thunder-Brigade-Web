@@ -134,11 +134,7 @@ canvas {
 /* dropdown */
 
 /* The dropdown container */
-.dropdown {
-  float: left;
-  overflow: hidden;
-  display: inline;
-}
+
 
 /* Dropdown button */
 .dropdown .dropbtn {
