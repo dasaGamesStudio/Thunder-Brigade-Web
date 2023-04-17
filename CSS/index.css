@@ -145,10 +145,10 @@ canvas {
   /* display: none; */
   border: none;
   outline: none;
-  margin: 0.5vw 1vw;
+  /* margin: 0.5vw 1vw; */
   font-size: var(--fs7);
   /* padding: 14px 16px; */
-  min-width: 98px;
+  /* min-width: 98px; */
   background-color: inherit;
   font-family: inherit; /* Important for vertical align on mobile phones */
   /* Important for vertical align on mobile phones */
