@@ -1,6 +1,6 @@
-//var canvas = document.querySelector("canvas");
-var canvas = document.createElement("canvas");
-document.currentScript.parentElement.appendChild(canvas);
+var canvas = document.querySelector("canvas");
+//var canvas = document.createElement("canvas");
+//document.currentScript.parentElement.appendChild(canvas);
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
