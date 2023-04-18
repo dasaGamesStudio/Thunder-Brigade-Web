@@ -64,11 +64,11 @@ nav ul li a:hover {
 @keyframes floating {
   0%,
   100% {
-    transform: skewY(-0.2deg);
+    transform: skewY(-0.3deg);
     scale: 1.02;
   }
   50% {
-    transform: skewY(0.2deg);
+    transform: skewY(0.3deg);
     scale: 1;
   }
 }
