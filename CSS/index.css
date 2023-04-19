@@ -126,9 +126,10 @@ canvas {
   background-color: rgb(2, 2, 15);
   border: 1px solid white;
   border-radius: 4px;
-  padding-left: 8px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding: 5px 8px;
+  width: 100%;
+  
+  
 }
 
 /* dropdown */

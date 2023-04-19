@@ -1,4 +1,5 @@
-// possible improvement is to use html.innertext to find element instead of class name
+// possible improvement is to use html.innertext to find element instead of class name 
+// have to change from class to id
 
 // gets all elements into an HTMLCollection
 const allelements = document.getElementsByTagName("*")
