@@ -2,9 +2,9 @@
 // below is the dropdown for members
 
 const listofmembers = `
-<button class="dropbtn">Members
+<a class="dropbtn">Members
   <i class="fa fa-caret-down"></i>
-</button>
+</a>
 <div class="dropdown-content">
   <a href="#">Afeef</a>
   <a href="#">Atheek</a>
