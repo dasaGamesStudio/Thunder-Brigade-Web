@@ -5,7 +5,7 @@
   --fs4: 50;
   --fs5: 50;
   --fs6: 50;
-  --fs7: 50;
+  /* --fs7: 50; */
 }
 
 * {
@@ -46,7 +46,7 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   font-size: var(--fs7);
-  transition: all 0.5s ease-in;
+  /* transition: all 0.5s ease-in; */
 }
 
 nav ul li a:hover {
@@ -157,7 +157,6 @@ canvas {
   display: none;
   position: absolute;
   background-color: inherit;
-  min-width: 98px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
@@ -165,7 +164,6 @@ canvas {
 /* Links inside the dropdown */
 .dropdown-content a {
   font-size: var(--fs7);
-  float: none;
   color: white;
   padding: 6px 6px;
   text-decoration: none;
