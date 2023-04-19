@@ -119,19 +119,25 @@ canvas {
 ::placeholder {
   color: white;
   opacity: 1;
+  font-size: var(--fs7);
 }
 
 .searchbar {
+  position: absolute;
+  font-size: var(--fs7);
   color: white;
   background-color: rgb(2, 2, 15);
   border: 1px solid white;
   border-radius: 4px;
   padding: 5px 8px;
   width: 100%;
-  
-  
+  height: 100%;
 }
-
+.search {
+  position: relative;
+  width: var(--sp1);
+  height: var(--sp2);
+}
 /* dropdown */
 
 /* The dropdown container */
