@@ -6,12 +6,12 @@ const listofmembers = `
   <i class="fa fa-caret-down"></i>
 </a>
 <div class="dropdown-content">
-  <a href="#">Afeef</a>
-  <a href="#">Atheek</a>
-  <a href="#">Bhanuka</a>
-  <a href="#">Nanthushan</a>
-  <a href="#">Oshada</a>
-  <a href="#">Savi</a>
+  <a href="#" class='afeef'>Afeef</a>
+  <a href="#" class='atheek'>Atheek</a>
+  <a href="#" class='bhanuka'>Bhanuka</a>
+  <a href="#" class='nanthushan'>Nanthushan</a>
+  <a href="#" class='oshada'>Oshada</a>
+  <a href="#" class='savi'>Savi</a>
 </div>
 `
 const members = document.querySelector('#members')
