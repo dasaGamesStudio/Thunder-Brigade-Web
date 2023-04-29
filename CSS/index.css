@@ -15,18 +15,30 @@
   color: rgb(218, 230, 242);
   user-select: none;
   -webkit-user-select: none;
+  scroll-behavior: smooth;
+
 }
 
 body {
   margin: 0px;
-  place-items: center;
-  overflow: hidden;
+  overflow: scroll;
   background: radial-gradient(circle, rgb(1, 27, 41), rgb(2, 2, 15));
 }
 
-.hero {
+#hero {
   width: 100%;
   height: 100vh;
+  padding: 1.5% 2%;
+}
+
+#projectsContent {
+  width: 100vw;
+  min-height: 100vh;
+  padding: 1.5% 2%;
+}
+#membersContent{
+  width: 100vw;
+  min-height: 100vh;
   padding: 1.5% 2%;
 }
 
@@ -56,7 +68,6 @@ nav ul li a:hover {
   position: absolute;
   top: 35%;
   left: 4%;
-
   animation: floating 8s ease-in-out infinite;
 }
 
@@ -90,7 +101,6 @@ nav ul li a:hover {
     rgb(222, 159, 82),
     rgb(197, 88, 207)
   );
-
   background-size: 200%;
   font-size: var(--fs3);
   font-weight: bolder;

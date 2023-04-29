@@ -19,10 +19,7 @@ function updateSizeProp() {
 updateSizeProp();
 
 function updateFontSizes() {
-  const refLength =
-    window.innerHeight > window.innerWidth
-      ? window.innerHeight
-      : window.innerWidth;
+  const refLength = window.innerWidth;
 
   const fontSizes = [
     0.25 / 1.55,
