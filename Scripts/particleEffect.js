@@ -10,16 +10,18 @@ const starCount = 120;
 const stars = [];
 const starColors = ["red", "white", "orange", "blue", "white", "pink"];
 
-for (let i = 0; i < starCount; i++) {
-  stars[i] = new AnimCircle(
-    innerWidth * Math.random(),
-    innerHeight * Math.random(),
-    2 * Math.random(),
-    0.5 * (Math.random() * 2 - 1),
-    0.5 * (Math.random() * 2 - 1),
-    starColors[Math.round(Math.random() * starColors.length)],
-    ctx
-  );
+function InitParticles(){
+  for (let i = 0; i < starCount; i++) {
+    stars[i] = new AnimCircle(
+      innerWidth * Math.random(),
+      innerHeight * Math.random(),
+      2 * Math.random(),
+      0.5 * (Math.random() * 2 - 1),
+      0.5 * (Math.random() * 2 - 1),
+      starColors[Math.round(Math.random() * starColors.length)],
+      ctx
+    );
+  }
 }
 
 function animate() {
@@ -29,7 +31,12 @@ function animate() {
     stars[i].update();
   }
 }
+InitParticles();
 animate();
+
+window.addEventListener("resize", function () {
+  InitParticles();
+});
 
 function AnimCircle(x, y, r, vx, vy, color, ctx) {
   this.x = x;
