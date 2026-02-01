@@ -55,10 +55,12 @@ html {
 
 #hero {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   padding: 1.5% 2%;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 #projectsContent {
@@ -80,16 +82,25 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1rem;
+  flex-wrap: nowrap;
+  gap: 2rem;
   width: 100%;
   position: relative;
-  z-index: 100;
+  z-index: 1000;
   padding: 1rem 0;
+  background: transparent;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+  justify-content: flex-end;
 }
 
 nav h2 {
-  font-size: var(--fs4);
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
   background: linear-gradient(
     135deg,
     rgb(197, 88, 207),
@@ -104,23 +115,25 @@ nav h2 {
   cursor: pointer;
 }
 
-nav ul {
+.nav-links ul {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   margin: 0;
   padding: 0;
+  gap: 0.2rem;
+  list-style: none;
 }
 
-nav ul li {
+.nav-links ul li {
   display: inline-block;
   list-style: none;
-  margin: 0.3rem 0.6rem;
+  margin: 0;
 }
 
-nav ul li a {
+.nav-links ul li a {
   text-decoration: none;
-  font-size: var(--fs7);
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
   transition: all 0.3s ease;
   -webkit-tap-highlight-color: transparent;
   padding: 0.45rem 0.7rem;
@@ -129,7 +142,7 @@ nav ul li a {
   position: relative;
 }
 
-nav ul li a::after {
+.nav-links ul li a::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -141,25 +154,29 @@ nav ul li a::after {
   transition: width 0.3s ease;
 }
 
-nav ul li a:hover::after {
+.nav-links ul li a:hover::after {
   width: 80%;
 }
 
-nav ul li a:hover {
+.nav-links ul li a:hover {
   color: rgb(222, 159, 82);
 }
 
-nav ul li a:active {
+.nav-links ul li a:active {
   opacity: 0.7;
   transform: scale(0.95);
 }
 
 .header-text {
-  position: absolute;
-  top: 35%;
-  left: 4%;
-  right: 4%;
-  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 4rem 2%;
+  max-width: 900px;
+  width: 100%;
+  margin-top: auto;
+  margin-bottom: auto;
   animation: floating 8s ease-in-out infinite;
 }
 
@@ -194,7 +211,7 @@ nav ul li a:active {
     rgb(197, 88, 207)
   );
   background-size: 200%;
-  font-size: var(--fs3);
+  font-size: clamp(2.5rem, 8vw, 6rem);
   font-weight: bolder;
   -webkit-background-clip: text;
   background-clip: text;
@@ -203,20 +220,20 @@ nav ul li a:active {
   word-wrap: break-word;
   overflow-wrap: break-word;
   line-height: 1.1;
+  margin: 0;
 }
 
 .header-text p {
-  margin: 10px 4px;
-  font-size: var(--fs6);
+  margin: 1rem 0;
+  font-size: clamp(1rem, 2vw, 1.3rem);
   font-weight: 100;
   word-wrap: break-word;
   overflow-wrap: break-word;
   line-height: 1.5;
 }
 .header-text h2 {
-  margin: 18px 4px 8px 4px;
-  font-size: var(--fs5);
-  word-wrap: break-word;
+  margin: 0 0 0.5rem 0;
+  font-size: clamp(1.2rem, 3vw, 2rem);\n  word-wrap: break-word;
   overflow-wrap: break-word;
 }
 
@@ -224,22 +241,23 @@ canvas {
   margin: 0;
   padding: 0;
   filter: blur(2px);
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   pointer-events: none;
+  z-index: 0;
 }
 ::placeholder {
   color: white;
   opacity: 1;
-  font-size: var(--fs7);
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
 }
 
 .searchbar {
   position: absolute;
-  font-size: var(--fs7);
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
   color: white;
   background-color: rgb(2, 2, 15);
   border: 1px solid white;
@@ -269,7 +287,7 @@ canvas {
 .dropdown .dropbtn {
   border: none;
   outline: none;
-  font-size: var(--fs7);
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
   background-color: inherit;
   font-family: inherit; 
 }
@@ -297,7 +315,7 @@ canvas {
 
 /* Links inside the dropdown */
 .dropdown-content a {
-  font-size: var(--fs7);
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
   color: white;
   padding: 0.8rem 1.2rem;
   text-decoration: none;
@@ -332,7 +350,7 @@ canvas {
 }
 
 .section-header h1 {
-  font-size: var(--fs2);
+  font-size: clamp(2rem, 5vw, 3.5rem);
   margin-bottom: 1rem;
   background: linear-gradient(
     to right,
@@ -347,7 +365,7 @@ canvas {
 }
 
 .section-header p {
-  font-size: var(--fs6);
+  font-size: clamp(0.95rem, 1.8vw, 1.2rem);
   opacity: 0.8;
   line-height: 1.5;
 }
@@ -399,14 +417,14 @@ canvas {
 }
 
 .project-info h3 {
-  font-size: var(--fs5);
+  font-size: clamp(1.2rem, 3vw, 2rem);
   margin-bottom: 1rem;
   color: rgb(222, 159, 82);
   line-height: 1.3;
 }
 
 .project-info p {
-  font-size: var(--fs6);
+  font-size: clamp(0.95rem, 1.8vw, 1.2rem);
   line-height: 1.6;
   margin-bottom: 1rem;
   opacity: 0.9;
@@ -423,14 +441,14 @@ canvas {
   background: rgba(197, 88, 207, 0.3);
   padding: 0.3rem 0.8rem;
   border-radius: 20px;
-  font-size: var(--fs7);
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
   border: 1px solid rgba(197, 88, 207, 0.5);
 }
 
 .project-link {
   color: rgb(197, 88, 207);
   text-decoration: none;
-  font-size: var(--fs6);
+  font-size: clamp(0.95rem, 1.8vw, 1.2rem);
   font-weight: bold;
   transition: color 0.3s ease;
   -webkit-tap-highlight-color: transparent;
@@ -496,21 +514,21 @@ canvas {
 }
 
 .member-info h3 {
-  font-size: var(--fs5);
+  font-size: clamp(1.2rem, 3vw, 2rem);
   margin-bottom: 0.5rem;
   color: rgb(222, 159, 82);
   line-height: 1.3;
 }
 
 .member-role {
-  font-size: var(--fs6);
+  font-size: clamp(0.95rem, 1.8vw, 1.2rem);
   color: rgb(197, 88, 207);
   margin-bottom: 1rem;
   font-weight: bold;
 }
 
 .member-bio {
-  font-size: var(--fs7);
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
   line-height: 1.6;
   opacity: 0.8;
   margin-bottom: 1.5rem;
@@ -525,7 +543,7 @@ canvas {
 .social-link {
   color: rgb(141, 88, 209);
   text-decoration: none;
-  font-size: var(--fs7);
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
   padding: 0.5rem 1rem;
   border: 1px solid rgba(141, 88, 209, 0.5);
   border-radius: 5px;
@@ -559,7 +577,7 @@ canvas {
 }
 
 .about-text h2 {
-  font-size: var(--fs4);
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
   color: rgb(222, 159, 82);
   margin-bottom: 1rem;
   margin-top: 2rem;
@@ -570,7 +588,7 @@ canvas {
 }
 
 .about-text p {
-  font-size: var(--fs6);
+  font-size: clamp(0.95rem, 1.8vw, 1.2rem);
   line-height: 1.8;
   opacity: 0.9;
   margin-bottom: 1rem;
@@ -582,7 +600,7 @@ canvas {
 }
 
 .values-list li {
-  font-size: var(--fs6);
+  font-size: clamp(0.95rem, 1.8vw, 1.2rem);
   line-height: 2;
   padding-left: 1.5rem;
   position: relative;
@@ -613,13 +631,13 @@ canvas {
 }
 
 .stat-card h3 {
-  font-size: var(--fs2);
+  font-size: clamp(2rem, 5vw, 3.5rem);
   color: rgb(222, 159, 82);
   margin-bottom: 0.5rem;
 }
 
 .stat-card p {
-  font-size: var(--fs6);
+  font-size: clamp(0.95rem, 1.8vw, 1.2rem);
   opacity: 0.8;
 }
 
@@ -640,7 +658,7 @@ canvas {
 }
 
 .contact-info h2 {
-  font-size: var(--fs4);
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
   color: rgb(222, 159, 82);
   margin-bottom: 2rem;
 }
@@ -657,13 +675,13 @@ canvas {
 }
 
 .info-item h4 {
-  font-size: var(--fs5);
+  font-size: clamp(1.2rem, 3vw, 2rem);
   color: rgb(197, 88, 207);
   margin-bottom: 0.5rem;
 }
 
 .info-item p {
-  font-size: var(--fs6);
+  font-size: clamp(0.95rem, 1.8vw, 1.2rem);
   opacity: 0.8;
 }
 
@@ -676,7 +694,7 @@ canvas {
 .social-icon {
   color: rgb(141, 88, 209);
   text-decoration: none;
-  font-size: var(--fs6);
+  font-size: clamp(0.95rem, 1.8vw, 1.2rem);
   padding: 0.8rem 1.5rem;
   border: 1px solid rgba(141, 88, 209, 0.5);
   border-radius: 8px;
@@ -703,7 +721,7 @@ canvas {
 
 .form-group label {
   display: block;
-  font-size: var(--fs6);
+  font-size: clamp(0.95rem, 1.8vw, 1.2rem);
   margin-bottom: 0.5rem;
   color: rgb(197, 88, 207);
 }
@@ -715,7 +733,7 @@ canvas {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 8px;
-  font-size: var(--fs6);
+  font-size: clamp(0.95rem, 1.8vw, 1.2rem);
   color: rgb(218, 230, 242);
   font-family: "Orbitron", sans-serif;
   transition: border-color 0.3s ease;
@@ -741,7 +759,7 @@ canvas {
   background: linear-gradient(135deg, rgb(197, 88, 207), rgb(141, 88, 209));
   border: none;
   border-radius: 8px;
-  font-size: var(--fs6);
+  font-size: clamp(0.95rem, 1.8vw, 1.2rem);
   color: white;
   font-weight: bold;
   cursor: pointer;
@@ -774,19 +792,19 @@ footer {
 }
 
 .footer-section h3 {
-  font-size: var(--fs4);
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
   color: rgb(222, 159, 82);
   margin-bottom: 1rem;
 }
 
 .footer-section h4 {
-  font-size: var(--fs5);
+  font-size: clamp(1.2rem, 3vw, 2rem);
   color: rgb(197, 88, 207);
   margin-bottom: 1rem;
 }
 
 .footer-section p {
-  font-size: var(--fs6);
+  font-size: clamp(0.95rem, 1.8vw, 1.2rem);
   opacity: 0.8;
 }
 
@@ -802,7 +820,7 @@ footer {
 .footer-links a {
   color: rgb(218, 230, 242);
   text-decoration: none;
-  font-size: var(--fs6);
+  font-size: clamp(0.95rem, 1.8vw, 1.2rem);
   transition: color 0.3s ease;
 }
 
@@ -819,7 +837,7 @@ footer {
 .footer-socials a {
   color: rgb(141, 88, 209);
   text-decoration: none;
-  font-size: var(--fs6);
+  font-size: clamp(0.95rem, 1.8vw, 1.2rem);
   padding: 0.5rem 1rem;
   border: 1px solid rgba(141, 88, 209, 0.5);
   border-radius: 5px;
@@ -838,7 +856,7 @@ footer {
 }
 
 .footer-bottom p {
-  font-size: var(--fs7);
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
   opacity: 0.6;
   margin: 0.5rem 0;
 }
@@ -860,24 +878,29 @@ footer {
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
-    gap: 0.8rem;
+    gap: 1rem;
     align-items: center;
   }
   
   nav h2 {
-    font-size: var(--fs4);
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    text-align: center;
   }
   
-  nav ul {
-    display: flex;
+  .nav-links {
+    width: 100%;
+  }
+  
+  .nav-links ul {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 0.3rem;
-    padding: 0;
+    gap: 0.5rem;
+    width: 100%;
   }
   
-  nav ul li {
-    margin: 0.2rem 0.4rem;
+  .nav-links ul li a {
+    padding: 0.5rem 0.8rem;
+    font-size: clamp(0.85rem, 2vw, 1rem);
   }
   
   .search {
@@ -887,8 +910,10 @@ footer {
   }
   
   .header-text {
-    left: 3%;
-    right: 3%;
+    padding: 3rem 3%;
+    text-align: center;
+    align-items: center;
+  }
     top: 25%;
     width: auto;
     max-width: 94%;
@@ -959,7 +984,7 @@ footer {
   }
   
   nav h2 {
-    font-size: var(--fs3);
+    font-size: clamp(1.5rem, 3.5vw, 2.2rem);
   }
   
   nav ul {
@@ -971,7 +996,7 @@ footer {
   }
   
   nav ul li a {
-    font-size: calc(var(--fs7) * 1.1);
+    font-size: clamp(1rem, 1.7vw, 1.2rem);
     padding: 0.3rem 0.5rem;
   }
   
@@ -992,11 +1017,11 @@ footer {
   }
   
   .section-header h1 {
-    font-size: calc(var(--fs2) * 0.9);
+    font-size: clamp(1.8rem, 4.5vw, 3.2rem);
   }
   
   .section-header p {
-    font-size: calc(var(--fs6) * 1.05);
+    font-size: clamp(1rem, 1.9vw, 1.25rem);
   }
   
   .project-card,
@@ -1029,17 +1054,17 @@ footer {
   
   .tag {
     padding: 0.25rem 0.6rem;
-    font-size: calc(var(--fs7) * 0.95);
+    font-size: clamp(0.85rem, 1.4vw, 1.05rem);
   }
   
   .about-text h2 {
     margin-top: 1.5rem;
-    font-size: calc(var(--fs4) * 0.95);
+    font-size: clamp(1.25rem, 2.4vw, 1.7rem);
   }
   
   .values-list li {
     padding-left: 1.2rem;
-    font-size: calc(var(--fs6) * 1.05);
+    font-size: clamp(1rem, 1.9vw, 1.25rem);
   }
   
   .about-stats {
@@ -1084,12 +1109,12 @@ footer {
   .form-group input,
   .form-group textarea {
     padding: 0.7rem;
-    font-size: calc(var(--fs6) * 1.05);
+    font-size: clamp(1rem, 1.9vw, 1.25rem);
   }
   
   .submit-btn {
     padding: 0.9rem;
-    font-size: calc(var(--fs6) * 1.05);
+    font-size: clamp(1rem, 1.9vw, 1.25rem);
   }
   
   footer {
@@ -1102,7 +1127,7 @@ footer {
   
   .footer-links a,
   .footer-socials a {
-    font-size: calc(var(--fs6) * 1.05);
+    font-size: clamp(1rem, 1.9vw, 1.25rem);
   }
 }
 
@@ -1145,7 +1170,7 @@ footer {
   }
   
   nav h2 {
-    font-size: calc(var(--fs4) * 0.85);
+    font-size: clamp(1.1rem, 2.1vw, 1.5rem);
   }
   
   .header-text {
@@ -1156,25 +1181,25 @@ footer {
   }
   
   .header-text h1 {
-    font-size: calc(var(--fs3) * 0.85);
+    font-size: clamp(2.1rem, 6.8vw, 5.1rem);
     line-height: 1.2;
   }
   
   .header-text h2 {
-    font-size: calc(var(--fs5) * 0.9);
+    font-size: clamp(1.1rem, 2.7vw, 1.8rem);
   }
   
   .header-text p {
-    font-size: calc(var(--fs6) * 0.95);
+    font-size: clamp(0.95rem, 1.9vw, 1.2rem);
   }
   
   .section-header h1 {
-    font-size: calc(var(--fs2) * 0.8);
+    font-size: clamp(1.6rem, 4vw, 2.8rem);
   }
   
   .project-info h3,
   .member-info h3 {
-    font-size: calc(var(--fs5) * 0.9);
+    font-size: clamp(1.1rem, 2.7vw, 1.8rem);
   }
   
   nav ul {
@@ -1186,7 +1211,7 @@ footer {
   }
   
   nav ul li a {
-    font-size: calc(var(--fs7) * 1.15);
+    font-size: clamp(1.05rem, 1.7vw, 1.25rem);
     padding: 0.25rem 0.4rem;
   }
   
