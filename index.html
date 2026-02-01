@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+    <meta name="description" content="Thunder Brigade - Innovate. Collaborate. Impact. Official website showcasing our projects including ERP, POS, Student Management, and Property Management systems." />
+    <meta name="theme-color" content="#011b29" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,6 +25,8 @@
     <script src="Scripts/dropdown.js" defer></script>
     <!-- search -->
     <script src="Scripts/search.js" defer></script>
+    <!-- contact form -->
+    <script src="Scripts/contactForm.js" defer></script>
 
     <!-- Mouse Trailer Effect. -->
     <script src="Scripts/mouseTrailer.js"></script>
@@ -37,8 +41,8 @@
           <li><a href="#hero" class="home">Home</a></li>
           <li><a href="#projectsContent" class="projects">Projects</a></li>
           <li><a href="#membersContent" class="dropdown" id="members"></a></li>
-          <li><a href="#" class="about">About</a></li>
-          <li><a href="#" class="contact">Contact</a></li>
+          <li><a href="#aboutContent" class="about">About</a></li>
+          <li><a href="#contactContent" class="contact">Contact</a></li>
         </ul>
       </nav>
       <div class="header-text">
@@ -49,12 +53,331 @@
       <script src="Scripts/particleEffect.js"></script>
     </div>
 
+    <!-- Projects Section -->
     <div id="projectsContent">
-      <h1>Projects</h1>
+      <div class="section-header">
+        <h1>Our Projects</h1>
+        <p>Explore the innovative projects we've built together</p>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-image">
+            <div class="project-placeholder">🏢</div>
+          </div>
+          <div class="project-info">
+            <h3>Enterprise Resource Planning (ERP) System</h3>
+            <p>Comprehensive ERP solution integrating finance, HR, inventory, and operations management. Streamlines business processes with real-time analytics and reporting.</p>
+            <div class="project-tags">
+              <span class="tag">Enterprise</span>
+              <span class="tag">Full Stack</span>
+              <span class="tag">Database</span>
+            </div>
+            <a href="#" class="project-link">View Project →</a>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <div class="project-image">
+            <div class="project-placeholder">💳</div>
+          </div>
+          <div class="project-info">
+            <h3>Point of Sale (POS) System</h3>
+            <p>Modern POS system with inventory tracking, sales analytics, customer management, and seamless payment processing for retail businesses.</p>
+            <div class="project-tags">
+              <span class="tag">Retail</span>
+              <span class="tag">Payment Integration</span>
+              <span class="tag">Cloud</span>
+            </div>
+            <a href="#" class="project-link">View Project →</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <div class="project-placeholder">🎓</div>
+          </div>
+          <div class="project-info">
+            <h3>Student Management System</h3>
+            <p>Complete educational platform managing student records, attendance, grades, course scheduling, and parent-teacher communication.</p>
+            <div class="project-tags">
+              <span class="tag">Education</span>
+              <span class="tag">Web App</span>
+              <span class="tag">Portal</span>
+            </div>
+            <a href="#" class="project-link">View Project →</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <div class="project-placeholder">🏠</div>
+          </div>
+          <div class="project-info">
+            <h3>Property Management System</h3>
+            <p>Integrated platform for property listings, tenant management, lease tracking, maintenance requests, and financial reporting for real estate operations.</p>
+            <div class="project-tags">
+              <span class="tag">Real Estate</span>
+              <span class="tag">CRM</span>
+              <span class="tag">Automation</span>
+            </div>
+            <a href="#" class="project-link">View Project →</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <div class="project-placeholder">🚀</div>
+          </div>
+          <div class="project-info">
+            <h3>Thunder Brigade Website</h3>
+            <p>Our official team website showcasing our work and achievements. Built with HTML, CSS, and JavaScript featuring modern animations.</p>
+            <div class="project-tags">
+              <span class="tag">Web Development</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">UI/UX</span>
+            </div>
+            <a href="#" class="project-link">View Project →</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <div class="project-placeholder">📊</div>
+          </div>
+          <div class="project-info">
+            <h3>Data Analytics Dashboard</h3>
+            <p>Interactive business intelligence dashboard providing real-time data visualization, KPI tracking, and predictive analytics capabilities.</p>
+            <div class="project-tags">
+              <span class="tag">Analytics</span>
+              <span class="tag">Data Viz</span>
+              <span class="tag">BI</span>
+            </div>
+            <a href="#" class="project-link">View Project →</a>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <!-- Members Section -->
     <div id="membersContent">
-      <h1>A Short intro of our members</h1>
-      <p>Here add some short summary of of us, use cards with pics. when someone click that. it will get us to the full page to read more about us.</p>
+      <div class="section-header">
+        <h1>Meet Our Team</h1>
+        <p>The talented individuals behind Thunder Brigade</p>
+      </div>
+      <div class="members-grid">
+        <div class="member-card afeef-card">
+          <div class="member-image">
+            <div class="member-placeholder">AR</div>
+          </div>
+          <div class="member-info">
+            <h3>Afeef Razick</h3>
+            <p class="member-role">Developer</p>
+            <p class="member-bio">Passionate about creating elegant solutions to complex problems.</p>
+            <div class="member-socials">
+              <a href="#" class="social-link">LinkedIn</a>
+              <a href="#" class="social-link">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="member-card atheek-card">
+          <div class="member-image">
+            <div class="member-placeholder">AN</div>
+          </div>
+          <div class="member-info">
+            <h3>Atheek Naheem</h3>
+            <p class="member-role">Developer</p>
+            <p class="member-bio">Focused on building scalable and efficient systems.</p>
+            <div class="member-socials">
+              <a href="#" class="social-link">LinkedIn</a>
+              <a href="#" class="social-link">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="member-card bhanuka-card">
+          <div class="member-image">
+            <div class="member-placeholder">BD</div>
+          </div>
+          <div class="member-info">
+            <h3>Bhanuka Dassanayake</h3>
+            <p class="member-role">Developer</p>
+            <p class="member-bio">Creative problem solver with a passion for innovation.</p>
+            <div class="member-socials">
+              <a href="#" class="social-link">LinkedIn</a>
+              <a href="#" class="social-link">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="member-card nanthushan-card">
+          <div class="member-image">
+            <div class="member-placeholder">NY</div>
+          </div>
+          <div class="member-info">
+            <h3>Nanthushan Yoogeswaran</h3>
+            <p class="member-role">Developer</p>
+            <p class="member-bio">Dedicated to delivering high-quality code and solutions.</p>
+            <div class="member-socials">
+              <a href="#" class="social-link">LinkedIn</a>
+              <a href="#" class="social-link">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="member-card oshada-card">
+          <div class="member-image">
+            <div class="member-placeholder">OP</div>
+          </div>
+          <div class="member-info">
+            <h3>Oshada Perera</h3>
+            <p class="member-role">Developer</p>
+            <p class="member-bio">Tech enthusiast with expertise in modern frameworks.</p>
+            <div class="member-socials">
+              <a href="#" class="social-link">LinkedIn</a>
+              <a href="#" class="social-link">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="member-card savi-card">
+          <div class="member-image">
+            <div class="member-placeholder">SS</div>
+          </div>
+          <div class="member-info">
+            <h3>Savi Saluwadana</h3>
+            <p class="member-role">Developer</p>
+            <p class="member-bio">Innovative thinker driving cutting-edge solutions.</p>
+            <div class="member-socials">
+              <a href="#" class="social-link">LinkedIn</a>
+              <a href="#" class="social-link">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <!-- About Section -->
+    <div id="aboutContent" class="about">
+      <div class="section-header">
+        <h1>About Thunder Brigade</h1>
+        <p>Who we are and what we stand for</p>
+      </div>
+      <div class="about-content">
+        <div class="about-text">
+          <h2>Our Mission</h2>
+          <p>Thunder Brigade is a collaborative team of passionate developers committed to innovation, creativity, and excellence in software development. We believe in the power of teamwork and continuous learning.</p>
+          
+          <h2>What We Do</h2>
+          <p>We specialize in web development, game development, and mobile applications. Our diverse skill set allows us to tackle projects of any scale, from small websites to complex enterprise solutions.</p>
+          
+          <h2>Our Values</h2>
+          <ul class="values-list">
+            <li><strong>Innovation:</strong> We constantly push boundaries and explore new technologies</li>
+            <li><strong>Collaboration:</strong> Teamwork is at the heart of everything we do</li>
+            <li><strong>Excellence:</strong> We strive for the highest quality in all our work</li>
+            <li><strong>Learning:</strong> Continuous improvement and skill development drive us forward</li>
+          </ul>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card">
+            <h3>6+</h3>
+            <p>Team Members</p>
+          </div>
+          <div class="stat-card">
+            <h3>10+</h3>
+            <p>Projects Completed</p>
+          </div>
+          <div class="stat-card">
+            <h3>2024</h3>
+            <p>Year Founded</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contactContent" class="contact">
+      <div class="section-header">
+        <h1>Get In Touch</h1>
+        <p>We'd love to hear from you</p>
+      </div>
+      <div class="contact-container">
+        <div class="contact-info">
+          <h2>Contact Information</h2>
+          <div class="info-item">
+            <span class="info-icon">📧</span>
+            <div>
+              <h4>Email</h4>
+              <p>contact@thunderbrigade.com</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="info-icon">🌐</span>
+            <div>
+              <h4>Social Media</h4>
+              <p>Follow us on our platforms</p>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="#" class="social-icon">GitHub</a>
+            <a href="#" class="social-icon">LinkedIn</a>
+            <a href="#" class="social-icon">Twitter</a>
+          </div>
+        </div>
+        
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required placeholder="John Doe">
+          </div>
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" required placeholder="john@example.com">
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required placeholder="Project Inquiry">
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Tell us about your project..."></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Thunder Brigade</h3>
+          <p>Innovate. Collaborate. Impact.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#projectsContent">Projects</a></li>
+            <li><a href="#membersContent">Team</a></li>
+            <li><a href="#aboutContent">About</a></li>
+            <li><a href="#contactContent">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Connect With Us</h4>
+          <div class="footer-socials">
+            <a href="#">GitHub</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Twitter</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Thunder Brigade. All rights reserved.</p>
+        <p>Built with ❤️ by the Thunder Brigade Team</p>
+      </div>
+    </footer>
   </body>
 </html>
