@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thunder Brigade - Responsive Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #1a1a1a;
+            color: #fff;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #c558cf;
+        }
+        .info {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .breakpoint {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin: 5px;
+            font-weight: bold;
+        }
+        .active {
+            background: #22c55e;
+            color: #000;
+        }
+        .inactive {
+            background: rgba(255,255,255,0.2);
+        }
+        #dimensions {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        .test-link {
+            display: block;
+            background: linear-gradient(135deg, #c558cf, #8d58d1);
+            color: white;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+        .test-link:hover {
+            transform: translateY(-3px);
+        }
+        .tips {
+            background: rgba(34,197,94,0.2);
+            border: 1px solid rgba(34,197,94,0.5);
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .tips h3 {
+            margin-top: 0;
+            color: #86efac;
+        }
+        .tips ul {
+            margin: 10px 0;
+        }
+        .tips li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>⚡ Thunder Brigade - Responsive Design Test</h1>
+        
+        <div class="info">
+            <h2>Current Screen Info</h2>
+            <div id="dimensions"></div>
+            <div id="breakpoints"></div>
+        </div>
+
+        <a href="index.html" class="test-link">🚀 Open Main Website</a>
+
+        <div class="tips">
+            <h3>Testing Instructions:</h3>
+            <ul>
+                <li><strong>Desktop (1440px+):</strong> All sections should be wide with 3-column layouts</li>
+                <li><strong>Laptop (1024px-1440px):</strong> 2-column layouts, navigation inline</li>
+                <li><strong>Tablet (768px-1024px):</strong> 2-column or 1-column layouts, navigation wrapping</li>
+                <li><strong>Mobile (480px-768px):</strong> Single column, stacked navigation, larger touch targets</li>
+                <li><strong>Small Mobile (360px-480px):</strong> Optimized for small screens, adjusted font sizes</li>
+                <li><strong>Very Small (< 360px):</strong> Minimal layout, compact spacing</li>
+            </ul>
+            
+            <h3>What to Check:</h3>
+            <ul>
+                <li>✓ No horizontal scrolling (overflow)</li>
+                <li>✓ All text is readable (not too small or too large)</li>
+                <li>✓ Navigation doesn't overlap</li>
+                <li>✓ Cards and grids stack properly</li>
+                <li>✓ Forms are easy to fill on mobile</li>
+                <li>✓ Buttons are easy to tap (44px min on mobile)</li>
+                <li>✓ Images and content don't overflow containers</li>
+            </ul>
+
+            <h3>How to Test:</h3>
+            <ul>
+                <li>🔍 <strong>Chrome/Edge:</strong> F12 → Toggle Device Toolbar (Ctrl+Shift+M / Cmd+Shift+M)</li>
+                <li>🔍 <strong>Firefox:</strong> F12 → Responsive Design Mode (Ctrl+Shift+M / Cmd+Opt+M)</li>
+                <li>🔍 <strong>Safari:</strong> Develop → Enter Responsive Design Mode</li>
+                <li>📱 Test on actual mobile devices if possible</li>
+                <li>📐 Resize browser window manually</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function updateInfo() {
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+            
+            document.getElementById('dimensions').innerHTML = 
+                `<strong>Screen Width:</strong> ${width}px | <strong>Height:</strong> ${height}px`;
+            
+            let breakpoints = [
+                { name: 'Very Small Mobile', range: '< 360px', active: width < 360 },
+                { name: 'Small Mobile', range: '360px - 480px', active: width >= 360 && width < 480 },
+                { name: 'Mobile', range: '480px - 768px', active: width >= 480 && width < 768 },
+                { name: 'Tablet', range: '768px - 1024px', active: width >= 768 && width < 1024 },
+                { name: 'Laptop', range: '1024px - 1440px', active: width >= 1024 && width < 1440 },
+                { name: 'Desktop', range: '1440px+', active: width >= 1440 }
+            ];
+            
+            let html = '<h3>Active Breakpoint:</h3>';
+            breakpoints.forEach(bp => {
+                html += `<span class="breakpoint ${bp.active ? 'active' : 'inactive'}">
+                    ${bp.name}<br><small>${bp.range}</small>
+                </span>`;
+            });
+            
+            document.getElementById('breakpoints').innerHTML = html;
+        }
+        
+        updateInfo();
+        window.addEventListener('resize', updateInfo);
+    </script>
+</body>
+</html>
