@@ -19,76 +19,76 @@ function updateSizeProp() {
 updateSizeProp();
 
 function updateFontSizes() {
-  const refLength = window.innerWidth;
+  const viewportWidth = window.innerWidth;
   
-  // Responsive font sizes with mobile-first approach
+  // Fixed font sizes in pixels - MUCH more predictable and stable
   let fontSizes;
   
-  if (refLength <= 360) {
+  if (viewportWidth <= 360) {
     // Very small mobile phones
     fontSizes = [
-      0.08,    // fs1 - very large headings
-      0.065,   // fs2 - large headings
-      0.055,   // fs3 - medium headings
-      0.045,   // fs4 - small headings
-      0.038,   // fs5 - subheadings
-      0.033,   // fs6 - body text
-      0.028,   // fs7 - small text
+      28,   // fs1 - very large headings
+      24,   // fs2 - large headings  
+      20,   // fs3 - medium headings
+      16,   // fs4 - small headings
+      14,   // fs5 - subheadings
+      12,   // fs6 - body text
+      10,   // fs7 - small text
     ];
-  } else if (refLength <= 480) {
+  } else if (viewportWidth <= 480) {
     // Mobile phones
     fontSizes = [
-      0.09,    // fs1 - very large headings
-      0.075,   // fs2 - large headings
-      0.06,    // fs3 - medium headings
-      0.05,    // fs4 - small headings
-      0.042,   // fs5 - subheadings
-      0.036,   // fs6 - body text
-      0.03,    // fs7 - small text
+      32,   // fs1
+      28,   // fs2
+      24,   // fs3
+      18,   // fs4
+      15,   // fs5
+      13,   // fs6
+      11,   // fs7
     ];
-  } else if (refLength <= 768) {
+  } else if (viewportWidth <= 768) {
     // Tablets
     fontSizes = [
-      0.11,
-      0.088,
-      0.07,
-      0.055,
-      0.046,
-      0.039,
-      0.032,
+      48,   // fs1
+      36,   // fs2
+      30,   // fs3
+      22,   // fs4
+      18,   // fs5
+      15,   // fs6
+      13,   // fs7
     ];
-  } else if (refLength <= 1024) {
+  } else if (viewportWidth <= 1024) {
     // Small laptops
     fontSizes = [
-      0.13,
-      0.10,
-      0.08,
-      0.06,
-      0.049,
-      0.041,
-      0.034,
+      56,   // fs1
+      42,   // fs2
+      36,   // fs3
+      26,   // fs4
+      20,   // fs5
+      16,   // fs6
+      14,   // fs7
     ];
-  } else if (refLength <= 1440) {
+  } else if (viewportWidth <= 1440) {
     // Standard laptops
     fontSizes = [
-      0.15,
-      0.11,
-      0.09,
-      0.065,
-      0.051,
-      0.042,
-      0.035,
+      64,   // fs1
+      48,   // fs2
+      42,   // fs3
+      28,   // fs4
+      22,   // fs5
+      17,   // fs6
+      14,   // fs7
     ];
   } else {
-    // Desktop and larger (1440px+)
+    // Desktop and larger (1440px+) - CAPPED to prevent huge text
     fontSizes = [
-      0.16,
-      0.12,
-      0.10,
-      0.068,
-      0.053,
-      0.043,
-      0.036,
+      72,   // fs1 - max
+      54,   // fs2 - max
+      48,   // fs3 - max
+      32,   // fs4 - max
+      24,   // fs5 - max
+      18,   // fs6 - max
+      15,   // fs7 - max
     ];
   }
   
@@ -96,7 +96,7 @@ function updateFontSizes() {
     var id = "--fs" + (i + 1);
     document.documentElement.style.setProperty(
       id,
-      fontSizes[i] * refLength + "px"
+      fontSizes[i] + "px"
     );
   }
 }
